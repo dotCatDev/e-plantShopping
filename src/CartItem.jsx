@@ -12,7 +12,7 @@ const CartItem = ({ onContinueShopping }) => {
 
     var total_amount = 0;
     for(var i=0; i < cart.length; i++){
-        total_amount += (cart.quantity * cart.cost);
+        total_amount = total_amount + (cart[i].quantity * cart[i].cost);
     }
 
     return total_amount;
