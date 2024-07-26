@@ -254,6 +254,7 @@ const handlePlantsClick = (e) => {
   };
 
   const handleAddToCart = (product) => {
+    debugger;
     dispatch(addItem(product));
     debugger;
     setAddedToCart((prevState) => ({
