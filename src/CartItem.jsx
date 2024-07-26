@@ -16,7 +16,6 @@ const CartItem = ({ onContinueShopping }) => {
     for(var i=0; i < cart.length; i++){
         var cost = Number(cart[i].cost.replace(/[^0-9\.]+/g,""));
         total_amount = total_amount + (cart[i].quantity * cost);
-        debugger;
     }
 
     return total_amount;
