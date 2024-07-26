@@ -32,13 +32,14 @@ const CartItem = ({ onContinueShopping }) => {
 
 
   const handleIncrement = (item) => {
-    item.quantity ++;
+    item.quantity = item.quantity +1;
     dispatch(updateQuantityAtCart(item));
 
   };
 
   const handleDecrement = (item) => {
-   item.quantity--;
+    debugger;
+    item.quantity = item.quantity - 1;
    if(item.quantity <= 0){
     dispatch(removeItemFromCart(item));
    }else{
