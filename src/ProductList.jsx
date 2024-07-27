@@ -257,6 +257,7 @@ const handlePlantsClick = (e) => {
 
   const handleAddToCart = (product) => {
     dispatch(addItemToCart(product));
+
     setAddedToCart((prevState) => ({
         ...prevState,
         [product.name]: true, // Set the product name as key and value as true to indicate it's added to cart
@@ -307,7 +308,7 @@ const handlePlantsClick = (e) => {
                         <img className="product-image" src={plant.image} alt={plant.name} />
                         <div className="product-title">{plant.name}</div>
                         {/*Similarly like the above plant.name show other details like description and cost*/}
-                        { addedToCart.hasOwnProperty(plant.name) ? <button className= "product-button btn-disabled" >Added to Cart</button> 
+                        { addedToCart[plant.name].value ? <button className= "product-button btn-disabled" >Added to Cart</button> 
                         : <button className= "product-button" onClick={() => handleAddToCart(plant)}>Add to Cart</button> }
                     </div>
                     ))}

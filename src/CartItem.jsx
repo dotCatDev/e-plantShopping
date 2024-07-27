@@ -6,6 +6,8 @@ import './CartItem.css';
 const CartItem = ({ onContinueShopping }) => {
   const cart = useSelector(state => state.cart.items);
   const [showCart, setShowCart] = useState(false); 
+  const [addedToCart, setAddedToCart] = useState({});
+
   const dispatch = useDispatch();
 
   // Calculate total amount for all products in the cart
@@ -48,6 +50,11 @@ const CartItem = ({ onContinueShopping }) => {
 
   const handleRemove = (item) => {
     dispatch(removeItemFromCart(item));
+
+    setAddedToCart((prevState) => ({
+        ...prevState,
+        [item.name]: false, // Set the product name as key and value as true to indicate it's added to cart
+      }));
   };
 
   // Calculate total cost based on quantity for an item
