@@ -255,13 +255,6 @@ const handlePlantsClick = (e) => {
     setShowCart(false);
   };
 
-  const handleRemoveItemFromCart = (e) => {
-    setAddedToCart((prevState) => ({
-        ...prevState,
-        [product.name]: false, // Set the product name as key and value as true to indicate it's added to cart
-      }));
-  }
-
   const handleAddToCart = (product) => {
     dispatch(addItemToCart(product));
 
