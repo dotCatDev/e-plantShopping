@@ -269,7 +269,7 @@ const handlePlantsClick = (e) => {
 
     var total_amount = 0;
     for(var i=0; i < cart.length; i++){
-        var total = cart.quantity;
+        var total = cart[i].quantity;
         total_amount = total_amount + total;
     }
 
