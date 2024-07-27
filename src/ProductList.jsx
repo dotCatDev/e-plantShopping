@@ -292,7 +292,7 @@ const handlePlantsClick = (e) => {
                         <img className="product-image" src={plant.image} alt={plant.name} />
                         <div className="product-title">{plant.name}</div>
                         {/*Similarly like the above plant.name show other details like description and cost*/}
-                        <button className={  addedToCart == plant.name ? "product-button btn-disabled" : "product-button" } onClick={() => handleAddToCart(plant)}>Add to Cart {addedToCart.product}</button>
+                        <button className={  addedToCart == plant.name ? "product-button btn-disabled" : "product-button" } onClick={() => handleAddToCart(plant)}>Add to Cart item.addedToCart</button>
                     </div>
                     ))}
                 </div>
