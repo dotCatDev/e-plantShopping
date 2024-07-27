@@ -259,11 +259,11 @@ const handlePlantsClick = (e) => {
     
     const added = [];
     console.log(addedToCart);
-    addedToCart.map( ( {key} ) => {
-        console.log(key);
-    })
 
-    setAddedToCart(added);
+    setAddedToCart((prevState) => ({
+        ...prevState,
+        [e.name]: false,
+      }));
 
   }
 
