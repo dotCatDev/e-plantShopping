@@ -50,7 +50,7 @@ const CartItem = ({ onContinueShopping, handleRemoveItemFromCart }) => {
 
   const handleRemove = (item) => {
 
-    handleRemoveItemFromCart(e);
+    handleRemoveItemFromCart(item);
     dispatch(removeItemFromCart(item));
 
 
