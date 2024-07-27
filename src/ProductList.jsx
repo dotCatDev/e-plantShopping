@@ -255,6 +255,11 @@ const handlePlantsClick = (e) => {
     setShowCart(false);
   };
 
+  const handleRemoveItemFromCart = (e) => {
+    console.log(e);
+    console.log(addedToCart);
+  }
+
   const handleAddToCart = (product) => {
     dispatch(addItemToCart(product));
 
@@ -318,7 +323,7 @@ const handlePlantsClick = (e) => {
 
         </div>
  ) :  (
-    <CartItem onContinueShopping={handleContinueShopping}/>
+    <CartItem onRemoveItemFromCart = { handleRemoveItemFromCart }  onContinueShopping={handleContinueShopping}/>
 )}
     </div>
     );
