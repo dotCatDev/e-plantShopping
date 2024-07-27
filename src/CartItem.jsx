@@ -5,8 +5,8 @@ import './CartItem.css';
 
 const CartItem = ({ onContinueShopping }) => {
   const cart = useSelector(state => state.cart.items);
+  const addedToCart = useSelector(state => state.addedToCart);
   const [showCart, setShowCart] = useState(false); 
-  const [addedToCart, setAddedToCart] = useState({});
 
   const dispatch = useDispatch();
 
@@ -50,9 +50,9 @@ const CartItem = ({ onContinueShopping }) => {
 
   const handleRemove = (item) => {
 
-    state.addedToCart.filter(item.name);
+    addedToCart.filter(item.name);
     debugger;
-    console.log(state.addedToCart);
+    console.log(addedToCart);
     dispatch(removeItemFromCart(item));
 
 
