@@ -50,12 +50,7 @@ const CartItem = ({ onContinueShopping }) => {
 
   const handleRemove = (item) => {
 
-    setAddedToCart((prevState) => ({
-        ...prevState,
-        [item.name]: false, // Set the product name as key and value as true to indicate it's added to cart
-      }));
-      debugger;
-      
+    handleRemoveItemFromCart(e);
     dispatch(removeItemFromCart(item));
 
 
