@@ -50,9 +50,10 @@ const CartItem = ({ onContinueShopping }) => {
 
   const handleRemove = (item) => {
 
+    console.log(addedToCart);
     addedToCart.filter(item.name);
     debugger;
-    console.log(addedToCart);
+
     dispatch(removeItemFromCart(item));
 
 
