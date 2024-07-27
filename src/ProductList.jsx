@@ -258,7 +258,7 @@ const handlePlantsClick = (e) => {
   const handleRemoveItemFromCart = (e) => {
     
     console.log(addedToCart[e.name] + ' and ' + e.name);
-    const newArray = array.filter((item, index) => item !== e.name);
+    const newArray = addedToCart.filter((item, index) => item !== e.name);
     setAddedToCart(newArray); // Updates the state with the new array
 
 
