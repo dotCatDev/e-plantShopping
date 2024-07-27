@@ -42,6 +42,7 @@ const CartItem = ({ onContinueShopping, onRemoveItemFromCart }) => {
   const handleDecrement = (item) => {
 
    if(item.quantity <= 1){
+    onRemoveItemFromCart(item);
     dispatch(removeItemFromCart(item));
    }else{
     dispatch(updateQuantityAtCart({name: item.name, quantity: item.quantity -1}));
