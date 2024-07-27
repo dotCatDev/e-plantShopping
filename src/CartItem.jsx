@@ -38,8 +38,7 @@ const CartItem = ({ onContinueShopping }) => {
   };
 
   const handleDecrement = (item) => {
-    debugger;
-    const { name, quantity } = item;
+
    if(item.quantity <= 1){
     dispatch(removeItemFromCart(item));
    }else{
