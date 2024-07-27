@@ -257,13 +257,10 @@ const handlePlantsClick = (e) => {
 
   const handleRemoveItemFromCart = (e) => {
     
-    
-    for (var i = addedToCart.length - 1; i >= 0; --i) {
-        console.log(addedToCart[i.key] + ' and ' + e.name);
-        if (addedToCart[i].key == e.name) {
-            addedToCart.splice(i,1);
-        }
-    }
+    console.log(addedToCart[e.name] + ' and ' + e.name);
+    const newArray = array.filter((item, index) => item !== e.name);
+    setAddedToCart(newArray); // Updates the state with the new array
+
 
 
   }
