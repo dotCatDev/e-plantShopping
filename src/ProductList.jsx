@@ -258,6 +258,8 @@ const handlePlantsClick = (e) => {
   const handleRemoveItemFromCart = (e) => {
     console.log(e);
     console.log(addedToCart);
+
+    addedToCart.filter(e.name);
   }
 
   const handleAddToCart = (product) => {
