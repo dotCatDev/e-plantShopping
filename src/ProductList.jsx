@@ -256,14 +256,17 @@ const handlePlantsClick = (e) => {
   };
 
   const handleRemoveItemFromCart = (e) => {
-    console.log(e);
-    console.log(addedToCart);
-
+    
+    
     for (var i = addedToCart.length - 1; i >= 0; --i) {
         if (addedToCart[i].key == e.name) {
             addedToCart.splice(i,1);
         }
     }
+
+    console.log(e.name);
+    console.log(addedToCart);
+
   }
 
   const handleAddToCart = (product) => {
