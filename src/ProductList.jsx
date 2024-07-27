@@ -259,7 +259,11 @@ const handlePlantsClick = (e) => {
     console.log(e);
     console.log(addedToCart);
 
-    addedToCart.filter(e.name);
+    for (var i = addedToCart.length - 1; i >= 0; --i) {
+        if (addedToCart[i].key == e.name) {
+            addedToCart.splice(i,1);
+        }
+    }
   }
 
   const handleAddToCart = (product) => {
