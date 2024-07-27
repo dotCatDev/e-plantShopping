@@ -55,6 +55,7 @@ const CartItem = ({ onContinueShopping }) => {
         ...prevState,
         [item.name]: false, // Set the product name as key and value as true to indicate it's added to cart
       }));
+      debugger;
   };
 
   // Calculate total cost based on quantity for an item
