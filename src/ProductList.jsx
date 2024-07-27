@@ -259,13 +259,12 @@ const handlePlantsClick = (e) => {
     
     
     for (var i = addedToCart.length - 1; i >= 0; --i) {
+        console.log(addedToCart[i.key] + ' and ' + e.name);
         if (addedToCart[i].key == e.name) {
             addedToCart.splice(i,1);
         }
     }
 
-    console.log(e.name);
-    console.log(addedToCart);
 
   }
 
