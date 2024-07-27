@@ -259,7 +259,7 @@ const handlePlantsClick = (e) => {
     
     const added = [];
     console.log(addedToCart);
-    console.log(addedToCart[0]);
+    console.log(addedToCart[0].key);
 
     setAddedToCart(added);
 
