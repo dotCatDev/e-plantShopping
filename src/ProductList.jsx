@@ -258,12 +258,8 @@ const handlePlantsClick = (e) => {
   const handleRemoveItemFromCart = (e) => {
     
     const added = [];
-    addedToCart.forEach((item) => {
-        console.log(item);
-        if (item !== e.name) {
-            added.push({ item : true });
-          }
-    });
+    console.log(addedToCart);
+    console.log(addedToCart[0]);
 
     setAddedToCart(added);
 
