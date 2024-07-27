@@ -259,7 +259,9 @@ const handlePlantsClick = (e) => {
     
     const added = [];
     console.log(addedToCart);
-    console.log(addedToCart[0].key);
+    addedToCart.map( ( {key} ) => {
+        console.log(key);
+    })
 
     setAddedToCart(added);
 
